@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "duckview"
+version = "0.1.0"
+description = "Python project to parse existing cisco configs, splice and store the configs, then inject the stored data into a template to write out a new config for a replacement device."
+authors = ["Pat McLean <github@psmware.ie>"]
+license = "AGPL3-only"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+mkdocs = "1.1.2"
+mkdocstrings = "0.15.1"
+mkdocs-material = "7.1.5"
+mkdocs-minify-plugin = "^0.4.0"
+
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
