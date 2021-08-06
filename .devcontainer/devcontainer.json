@@ -70,4 +70,5 @@
 	],
     "remoteUser": "vscode",
     "postCreateCommand": "/home/vscode/.poetry/bin/poetry install",
+    "runArgs": ["--env-file",".env"],
 }

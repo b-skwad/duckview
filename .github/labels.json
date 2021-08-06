@@ -1,0 +1,77 @@
+[
+    {
+        "name": "type:bug",
+        "description": "Something isn’t working.",
+        "color": "d73a4a"
+    },
+    {
+        "name": "type:enhancement",
+        "description": "New feature or request.",
+        "color": "a2eeef"
+    },
+    {
+        "name": "type:invalid",
+        "description": "This doesn't seem right.",
+        "color": "993299"
+    },
+    {
+        "name": "type:question",
+        "description": "Further information is requested.",
+        "color": "d876e3"
+    },
+    {
+        "name": "type:wont-fix",
+        "description": "This issue or pull request already exists.",
+        "color": "d876e3"
+    },
+    {
+        "name": "needs:code-review",
+        "description": "This requires code review.",
+        "color": "999999"
+    },
+    {
+        "name": "needs:design",
+        "description": "This requires design to resolve.",
+        "color": "999999"
+    },
+    {
+        "name": "needs:documentation",
+        "description": "This requires documentation.",
+        "color": "999999"
+    },
+    {
+        "name": "needs:feedback",
+        "description": "This requires feedback to determine next steps.",
+        "color": "999999"
+    },
+    {
+        "name": "needs:refresh",
+        "description": "This requires a refreshed PR to resolve.",
+        "color": "999999"
+    },
+    {
+        "name": "needs:tests",
+        "description": "This requires tests.",
+        "color": "999999"
+    },
+    {
+        "name": "resolution:not-applicable",
+        "description": "We do not feel this issue is valid.",
+        "color": "FFA500"
+    },
+    {
+        "name": "resolution:not-reproducible",
+        "description": "We are unable to reproduce this issue.",
+        "color": "FFFF00"
+    },
+    {
+        "name": "resolution:resolved",
+        "description": "This issue has been resolved.",
+        "color": "008000"
+    },
+    {
+        "name": "resolution:postfix",
+        "description": "We do not intend to resolve this issue.",
+        "color": "000000"
+    }
+]
