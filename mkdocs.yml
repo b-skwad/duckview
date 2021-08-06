@@ -1,0 +1,42 @@
+site_name: DUCKView
+site_description: "Taking the duck ouf of SANView"
+repo_url: "https://github.com/b-skwad/duckview"
+edit_uri: "blob/master/docs/"
+repo_name: "b-skwad/duckview"
+
+theme:
+  icon:
+    repo: fontawesome/brands/git-alt
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+  features:
+    - navigation.instant
+    - navigation.tracking
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - Using the Repository:
+      - Cloning the Repository: usage/cloning-the-repo.md
+      - Opening the Project: usage/opening-the-project.md
+  - Glossary:
+      - Working With GitHub: glossary/working-with-github.md
+      - Using GitFlow: glossary/gitflow.md
+      - Markdown Cheat-sheet: glossary/mark-down.md
