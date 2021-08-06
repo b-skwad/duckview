@@ -1,0 +1,42 @@
+site_name: South Asian Recipes
+site_description: "My recipes mostly from the indian Sub-Continent"
+repo_url: "https://github.com/psmware/indian"
+edit_uri: "blob/master/docs/"
+repo_name: "psmware-ltd/indian"
+
+theme:
+  icon:
+    repo: fontawesome/brands/git-alt
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+  features:
+    - navigation.instant
+    - navigation.tracking
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - Using the Repository:
+      - Cloning the Repository: usage/cloning-the-repo.md
+      - Opening the Project: usage/opening-the-project.md
+  - Glossary:
+      - Working With GitHub: glossary/working-with-github.md
+      - Using GitFlow: glossary/gitflow.md
+      - Markdown Cheat-sheet: glossary/mark-down.md
