@@ -1,0 +1,561 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Taking the duck ouf of SANView">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+    
+    
+      
+        <title>Gpg on ubuntu - DUCKView</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-gpg" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DUCKView" class="md-header__button md-logo" aria-label="DUCKView" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DUCKView
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gpg on ubuntu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/b-skwad/duckview/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    b-skwad/duckview
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DUCKView" class="md-nav__button md-logo" aria-label="DUCKView" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    DUCKView
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/b-skwad/duckview/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    b-skwad/duckview
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Using the Repository
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Using the Repository" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Using the Repository
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/cloning-the-repo/" class="md-nav__link">
+        Cloning the Repository
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/opening-the-project/" class="md-nav__link">
+        Opening the Project
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Glossary
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Glossary" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Glossary
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/working-with-github/" class="md-nav__link">
+        Working With GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/gitflow/" class="md-nav__link">
+        Using GitFlow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/mark-down/" class="md-nav__link">
+        Markdown Cheat-sheet
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-gpg" class="md-nav__link">
+    Installing GPG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-your-gpg-public-key-to-github" class="md-nav__link">
+    Adding your GPG Public Key to Github
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/b-skwad/duckview/blob/master/docs/cdf/gpg-on-ubuntu.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Gpg on ubuntu</h1>
+                
+                <h2 id="installing-gpg">Installing GPG</h2>
+<p>Using GPG, you sign tags and commits locally. These tags or commits are marked as verified on GitHub so other people in the Team can trust that the changes come from a trusted source. I suggest commit signing for all code.</p>
+<h2 id="installation-steps">Installation Steps</h2>
+<p>Open a Ubuntu Terminal. In the terminal run the following.</p>
+<div class="highlight"><pre><span></span><code>me@my-pc:~$ gpg --full-generate-key
+gpg <span class="o">(</span>GnuPG<span class="o">)</span> <span class="m">2</span>.2.19<span class="p">;</span> Copyright <span class="o">(</span>C<span class="o">)</span> <span class="m">2019</span> Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please <span class="k">select</span> what kind of key you want:
+   <span class="o">(</span><span class="m">1</span><span class="o">)</span> RSA and RSA <span class="o">(</span>default<span class="o">)</span>
+   <span class="o">(</span><span class="m">2</span><span class="o">)</span> DSA and Elgamal
+   <span class="o">(</span><span class="m">3</span><span class="o">)</span> DSA <span class="o">(</span>sign only<span class="o">)</span>
+   <span class="o">(</span><span class="m">4</span><span class="o">)</span> RSA <span class="o">(</span>sign only<span class="o">)</span>
+  <span class="o">(</span><span class="m">14</span><span class="o">)</span> Existing key from card
+Your selection? <span class="m">1</span>
+RSA keys may be between <span class="m">1024</span> and <span class="m">4096</span> bits long.
+What keysize <span class="k">do</span> you want? <span class="o">(</span><span class="m">3072</span><span class="o">)</span> <span class="m">4096</span>
+Requested keysize is <span class="m">4096</span> bits
+Please specify how long the key should be valid.
+         <span class="nv">0</span> <span class="o">=</span> key does not expire
+      &lt;n&gt;  <span class="o">=</span> key expires <span class="k">in</span> n days
+      &lt;n&gt;w <span class="o">=</span> key expires <span class="k">in</span> n weeks
+      &lt;n&gt;m <span class="o">=</span> key expires <span class="k">in</span> n months
+      &lt;n&gt;y <span class="o">=</span> key expires <span class="k">in</span> n years
+Key is valid <span class="k">for</span>? <span class="o">(</span><span class="m">0</span><span class="o">)</span> <span class="m">0</span>
+Key does not expire at all
+</code></pre></div>
+<p>If you have made no mistakes, Type Y, press Enter/Return, otherwise type N to restart the process.</p>
+<div class="highlight"><pre><span></span><code>Is this correct? <span class="o">(</span>y/N<span class="o">)</span> y
+</code></pre></div>
+<p>Now, proceed with setting up your credentials for signing. In this example, I am using  <em>~Your Name~</em> and <em>~your email address~</em>, for demonstration purposes. Use your own name and email.</p>
+<div class="highlight"><pre><span></span><code>GnuPG needs to construct a user ID to identify your key.
+
+Real name: ~Your Name~
+Email address: ~your email address~
+Comment: enter comment here
+You selected this USER-ID:
+    <span class="s2">&quot;~Your Name~ (enter comment here) &lt;~your email address~&gt;&quot;</span>
+
+Change <span class="o">(</span>N<span class="o">)</span>ame, <span class="o">(</span>C<span class="o">)</span>omment, <span class="o">(</span>E<span class="o">)</span>mail or <span class="o">(</span>O<span class="o">)</span>kay/<span class="o">(</span>Q<span class="o">)</span>uit?
+</code></pre></div>
+<p>If you have made no mistakes, Type <code>O</code>, press Enter/Return, otherwise type <code>N</code>, <code>E</code>, or <code>C</code> to fix the appropriate part of the key, then press O to continue.</p>
+<p>After a while, the password dialog box shown will appear, enter a good passphrase twice to protect your key, then click OK to continue.</p>
+<div class="highlight"><pre><span></span><code>    ┌──────────────────────────────────────────────────────┐
+    │ Please enter a passphrase                           │
+    │ Passphrase: ***********____________________________ │
+    │       &lt;OK&gt;                              &lt;Cancel&gt;    │
+    └──────────────────────────────────────────────────────┘
+</code></pre></div>
+<p>And to confirm</p>
+<div class="highlight"><pre><span></span><code>    ┌──────────────────────────────────────────────────────┐
+    │ Please re-enter this passphrase                     │
+    │ Passphrase: ***********____________________________ │
+    │       &lt;OK&gt;                              &lt;Cancel&gt;    │
+    └──────────────────────────────────────────────────────┘
+</code></pre></div>
+<p>We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilise the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy.</p>
+<div class="highlight"><pre><span></span><code>gpg: /home/devops/.gnupg/trustdb.gpg: trustdb created
+gpg: key A9E3031D40E7A31F marked as ultimately trusted
+gpg: directory <span class="s1">&#39;/home/devops/.gnupg/openpgp-revocs.d&#39;</span> created
+gpg: revocation certificate stored as <span class="s1">&#39;/home/devops/.gnupg/openpgp-revocs.d/71859D719307C206B6936735A9E3031D40E7A31F.rev&#39;</span>
+public and secret key created and signed.
+
+pub   rsa4096 <span class="m">2021</span>-06-03 <span class="o">[</span>SC<span class="o">]</span>
+     71859D719307C206B6936735A9E3031D40E7A31F
+uid                      ~Your Name~ <span class="o">(</span>enter comment here<span class="o">)</span> ~your email address~
+sub   rsa4096 <span class="m">2021</span>-06-03 <span class="o">[</span>E<span class="o">]</span>
+
+me@my-pc:~$
+</code></pre></div>
+<p>The detail of your pubring.kbx should show your newly created key. List your key details as follows.</p>
+<div class="highlight"><pre><span></span><code>me@my-pc:~$ gpg --list-secret-keys --keyid-format LONG
+/home/devops/.gnupg/pubring.kbx
+-------------------------------
+sec   rsa4096/A9E3031D40E7A31F <span class="m">2021</span>-06-03 <span class="o">[</span>SC<span class="o">]</span>
+     71859D719307C206B6936735A9E3031D40E7A31F
+uid                 <span class="o">[</span>ultimate<span class="o">]</span> ~Your Name~ <span class="o">(</span>enter comment here<span class="o">)</span> ~your email address~
+ssb   rsa4096/B8239EB7C4286DAB <span class="m">2021</span>-06-03 <span class="o">[</span>E<span class="o">]</span>
+me@my-pc:~$
+</code></pre></div>
+<p>The last thing to do is ensure that GPG knows where to execute its signing process. To configure this, run the following in your Ubuntu terminal:</p>
+<div class="highlight"><pre><span></span><code>me@my-pc:~$ <span class="nb">echo</span> <span class="s2">&quot;export GPG_TTY=</span><span class="k">$(</span>tty<span class="k">)</span><span class="s2">&quot;</span> &gt;&gt; ~/.bashrc
+me@my-pc:~$ <span class="nb">source</span> ~/.bashrc
+me@my-pc:~$ env <span class="p">|</span> grep GPG
+<span class="nv">GPG_TTY</span><span class="o">=</span>/dev/pts/0
+me@my-pc:~$
+GPG is now installed and configured.
+</code></pre></div>
+<h2 id="adding-your-gpg-public-key-to-github">Adding your GPG Public Key to Github</h2>
+<p>In the upper-right corner of any page, click your profile photo, then click Settings.</p>
+<p><img alt="alt" src="../img/gh-settings.png" /></p>
+<p>In the user settings sidebar, click SSH and GPG keys.</p>
+<p><img alt="alt" src="../img/add-gpg.png" /></p>
+<p>Click  <strong>New GPG key</strong>.</p>
+<p><img alt="alt" src="../img/new-gpg.png" /></p>
+<p>In the same terminal that you had open for the creation of your GPG key, again,  type the following to list your gpg keys.  Again for demonstration purposes I am using ~Your Name~'s here.</p>
+<div class="highlight"><pre><span></span><code>me@my-pc:~$ gpg --list-secret-keys --keyid-format LONG
+/home/devops/.gnupg/pubring.kbx
+-------------------------------
+sec   rsa4096/A9E3031D40E7A31F <span class="m">2021</span>-06-03 <span class="o">[</span>SC<span class="o">]</span>
+      71859D719307C206B6936735A9E3031D40E7A31F
+uid                 <span class="o">[</span>ultimate<span class="o">]</span> ~Your Name~ <span class="o">(</span>enter comment here<span class="o">)</span> ~your email address~
+ssb   rsa4096/B8239EB7C4286DAB <span class="m">2021</span>-06-03 <span class="o">[</span>E<span class="o">]</span>
+me@my-pc:~$
+</code></pre></div>
+<p>From the list of GPG keys, copy the GPG key ID that corresponds to your  credentials. In this example, the GPG key ID is <code>A9E3031D40E7A31F</code> from the line beginning with <code>sec</code> above. Now we export the public key associated with your credential, by running the following. In the example here we are using the key listed above. This exports the key in ASCII format to allow for copying to GitHub.</p>
+<div class="highlight"><pre><span></span><code>me@my-pc:~$ gpg --armor --export A9E3031D40E7A31F
+-----BEGIN PGP PUBLIC KEY BLOCK-----      <span class="c1"># Copy this line as well•</span>
+mQINBF3/pfYBEADBtsYohFlwuKqFcuekU3CybI3dAY4K/kFfQQHOiSRc/n4KAXc3
+WdA3NscYfLjYURfGpS2A91dV5XUkyN7J70w2q7SII4TXndpsEfXBEq0/Iv8Qj6Al
+hXofy4XRR2KZBRZdbxqHBrmrxpRVR6meBYOpOVxptxkq64i4nyJVLVRDMXm7isA9
+RNIcRBzO5ycuSrNvsh9ZyruLWEIHcWR9maYd6nRjjhTjV8VMbwqay1KmNPQbJbxF
+•&lt;!--              snipped text <span class="k">for</span> convenience               --&gt;
+•LOu4rLotu1Z8MYqp4ZY89vur1E81vDMULB0I8ejYgwKBbLDqVfWgpy+z5rHTEwoK
+8aJ9iLRuVPt0R97akNSyOdbSYjsU36I06KijB+uLBi4mKQ5q4Y08eIfSDSas5YlD
++OLY6oPTvc3WL8U<span class="o">==</span>GdYQ
+-----END PGP PUBLIC KEY BLOCK-----       <span class="c1"># Copy this line as well</span>
+</code></pre></div>
+<p>Select your key including the <strong>BEGIN/END</strong> lines, as indicated above, and paste the text into the Key field in GitHub</p>
+<p>Click the green <strong>Add GPG Key</strong> button.</p>
+<p><img alt="alt" src="../img/save-gpg.png" /></p>
+<p>When prompted, confirm your GitHub password. Your GPG Key has now been added and is ready for use with GitHub.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      
+    
+  </body>
+</html>
