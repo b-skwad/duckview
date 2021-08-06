@@ -1,8 +1,8 @@
-site_name: South Asian Recipes
-site_description: "My recipes mostly from the indian Sub-Continent"
-repo_url: "https://github.com/psmware/indian"
+site_name: DUCKView
+site_description: "Taking the duck ouf of SANView"
+repo_url: "https://github.com/b-skwad/duckview"
 edit_uri: "blob/master/docs/"
-repo_name: "psmware-ltd/indian"
+repo_name: "b-skwad/duckview"
 
 theme:
   icon:
