@@ -33,6 +33,15 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Press release/FAQ: prfaq.md
+  - Installation of the SCDE:
+      - Prerequisites: cdf/prerequisites.md
+      - Visual Studio Code: cdf/vscode.md
+      - Docker Desktop: cdf/docker-desktop.md
+      - Install Ubuntu on Windows: cdf/ubuntu.md
+      - SSH on Ubuntu/GitHub: cdf/ssh-on-ubuntu.md
+      - GPG on Ubuntu/GitHub: cdf/gpg-on-ubuntu.md
+      - Git on Ubuntu: cdf/gpg-and-git.md
   - Using the Repository:
       - Cloning the Repository: usage/cloning-the-repo.md
       - Opening the Project: usage/opening-the-project.md

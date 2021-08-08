@@ -30,7 +30,7 @@ The project will now open in the development docker container. The green icon wi
 
 The first time opening this container on your machine will take a while, as the required development images need to be downloaded from Docker Hub, to build the container. I suggest a coffee, or maybe a 15 nap.
 
-The container will be fully loaded and ready to use when the icon in the bottom left switches from **Opening Remote** to **Dev Container: Config Parser** as shown.
+The container will be fully loaded and ready to use when the icon in the bottom left switches from **Opening Remote** to **Dev Container: F&#10036;&#10036;&#10036; Parser** as shown.
 
 ![Remote Icon](img/vsc-remote-opened.png)
 
@@ -39,8 +39,11 @@ We can now test that the container is up and running by opening a terminal withi
 The command prompt of the new terminal will read:
 
 ``` bash
-vscode@duckview:/app$
+╭─vscode@duckview /app  ‹develop›
+╰─➤
 ```
+
+`<develop>` references your current git branch.  This is the branch from which you will create feature branches.
 
 ## Closing the project
 
