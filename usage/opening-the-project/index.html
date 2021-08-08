@@ -216,6 +216,135 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../prfaq/" class="md-nav__link">
+        Press release/FAQ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Installation of the SCDE
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation of the SCDE" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation of the SCDE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/prerequisites/" class="md-nav__link">
+        Prerequisites
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/vscode/" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/docker-desktop/" class="md-nav__link">
+        Docker Desktop
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/ubuntu/" class="md-nav__link">
+        Install Ubuntu on Windows
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/ssh-on-ubuntu/" class="md-nav__link">
+        SSH on Ubuntu/GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/gpg-on-ubuntu/" class="md-nav__link">
+        GPG on Ubuntu/GitHub
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cdf/gpg-and-git/" class="md-nav__link">
+        Git on Ubuntu
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -223,14 +352,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
-      <label class="md-nav__link" for="__nav_2">
+      <label class="md-nav__link" for="__nav_4">
         Using the Repository
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using the Repository" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Using the Repository
         </label>
@@ -334,14 +463,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
-      <label class="md-nav__link" for="__nav_3">
+      <label class="md-nav__link" for="__nav_5">
         Glossary
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Glossary" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Glossary
         </label>
@@ -476,12 +605,14 @@ me@my-pc ~/dev/apps/duckview$
 <p>The project will now open in the development docker container. The green icon will switch from <img alt="Remote Icon" src="../img/vsc-icon.png" /> to saying <strong>Opening Remote...</strong>.</p>
 <p><img alt="Remote Icon" src="../img/vsc-opening.png" /></p>
 <p>The first time opening this container on your machine will take a while, as the required development images need to be downloaded from Docker Hub, to build the container. I suggest a coffee, or maybe a 15 nap.</p>
-<p>The container will be fully loaded and ready to use when the icon in the bottom left switches from <strong>Opening Remote</strong> to <strong>Dev Container: Config Parser</strong> as shown.</p>
+<p>The container will be fully loaded and ready to use when the icon in the bottom left switches from <strong>Opening Remote</strong> to <strong>Dev Container: F&#10036;&#10036;&#10036; Parser</strong> as shown.</p>
 <p><img alt="Remote Icon" src="../img/vsc-remote-opened.png" /></p>
 <p>We can now test that the container is up and running by opening a terminal within VSC. To open a new terminal in VSCode on Windows, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd>'</kbd></span>  or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>'</kbd></span></p>
 <p>The command prompt of the new terminal will read:</p>
-<div class="highlight"><pre><span></span><code>vscode@duckview:/app$
+<div class="highlight"><pre><span></span><code>╭─vscode@duckview /app  ‹develop›
+╰─➤
 </code></pre></div>
+<p><code>&lt;develop&gt;</code> references your current git branch.  This is the branch from which you will create feature branches.</p>
 <h2 id="closing-the-project">Closing the project</h2>
 <p>In the menu-bar, click <strong>File -&gt; Close Remote Connection</strong>, this stops the development container.</p>
 <p><img alt="Open Folder" src="../img/vsc-close-remote.png" /></p>
