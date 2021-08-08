@@ -1,6 +1,6 @@
 ## Installing GPG
 
-Using GPG, you sign tags and commits locally. These tags or commits are marked as verified on GitHub so other people in the Team can trust that the changes come from a trusted source. I suggest commit signing for all code.
+Using GPG, you sign tags and commits locally. These tags or commits are marked as verified on GitHub so other people in the Team can trust that the changes come from a trusted source. I suggest commit signing for all code. I really like signed code.
 
 ## Installation Steps
 

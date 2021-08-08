@@ -94,3 +94,4 @@ data/json/
 !data/original/.gitkeep
 data/*.db
 data/*.db-journal
+.DS_Store
