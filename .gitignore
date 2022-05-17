@@ -95,3 +95,5 @@ data/json/
 data/*.db
 data/*.db-journal
 .DS_Store
+*.db
+*.csv
